@@ -59,7 +59,7 @@ Over 25% of rows have stress_level = 10.0 and over 16% have mental_fatigue_score
 ### Risk 3 - Self-reported scores introduce systematic bias (Scale / Reliability)
 **Layer:** Silver → Gold | **Type:** Scale / Measurement
 
-The scores for sleep_quality_score, stress_level, and mental_fatigue_score are all **self-reported on a 1–10 scale**. Different occupations and demographics may interpret the scale differently — a Doctor's "7 stress" is not necessarily the same as a Student's "7 stress". Additionally, caffeine_intake_cups is in cups, making cross-dataset comparisons unreliable since cup sizes vary.
+The scores for sleep_quality_score, stress_level, and mental_fatigue_score are all **self-reported on a 1–10 scale**. Different occupations and demographics may interpret the scale differently - a Doctor's "7 stress" is not necessarily the same as a Student's "7 stress". Additionally, caffeine_intake_cups is in cups, making cross-dataset comparisons unreliable since cup sizes vary.
 
 **Countermeasure:** Document the unit and collection method for each subjective column. Treat Gold-layer comparisons across groups as indicative rather than causal.
 
@@ -88,7 +88,7 @@ cp sleep_mobile_stress_dataset_15000.csv data/
 mkdir -p sql
 cp 1_bronze.sql 2_silver.sql 3_gold.sql sql/
 
-# 5. Start PostgreSQL — scripts run automatically on first boot
+# 5. Start PostgreSQL - scripts run automatically on first boot
 docker-compose up -d
 
 # 6. Check logs to confirm all layers loaded
